@@ -4,7 +4,7 @@ const shell = require('shelljs');
 const {projectPath} = require("../setting")
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.post('/', function (req, res, next) {
   shell.exec(`
   cd ${projectPath} &&
   git pull origin master &&
