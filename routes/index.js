@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 const shell = require('shelljs');
+const {projectPath} = require("../setting")
 
-const path = ""
 /* GET home page. */
 router.get('/', function (req, res, next) {
   shell.exec(`
-  cd ${path} &&
+  cd ${projectPath} &&
   git pull origin master &&
   yarn &&
   yarn build
